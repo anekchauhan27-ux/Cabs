@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact SafeRide School Cabs for safe school transport in Delhi. Call +91 96548 02436 or fill the form for a free quote. Serving Dwarka & Najafgarh.">
+    <meta name="keywords" content="contact school cab, book school transport, school cab enquiry, SafeRide contact">
+    <title>Contact Us - Book School Cab Service | SafeRide</title>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://saferideschoolcabs.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://saferideschoolcabs.com/contact.html"
+      }]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>SafeRide <span>School Cabs</span></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="areas.html">Areas</a></li>
+                    <li><a href="schools.html">Schools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn btn-primary active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-phone">
+                <a href="tel:+919654802436" class="btn btn-call">📞 Call Now</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <button class="close-menu-btn" onclick="closeMenu()">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="schools.html">Schools</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Book Your Safe School Transport Today</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Get in touch with us for a free consultation and quote</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+919654802436">+91 96548 02436</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/919654802436">+91 96548 02436</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Service Areas</h4>
+                                <p>Dwarka, Najafgarh & Nearby Areas</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Mon - Sat: 6:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="owner-info-card">
+                        <h4>Managed by</h4>
+                        <p><strong>Ajay Chauhan</strong></p>
+                        <p>20+ Years of Experience in School Transport</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Parent's Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Your Area *</label>
+                            <input type="text" id="area" name="area" required placeholder="e.g., Dwarka Sector 12">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="school">School Name</label>
+                            <input type="text" id="school" name="school" placeholder="e.g., Sachdeva Global School">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Any specific requirements or questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2010 SafeRide School Cabs. All rights reserved.</p>
+            <p class="tagline">"Safe Journeys for Every Child."</p>
+            <p class="experience-badge">⭐ Trusted Since 2010 | 20+ Years of Safe School Transport</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="tel:+919654802436" class="btn btn-primary">📞 Call Now: 96548 02436</a>
+    </div>
+
+    <script src="js/script.js?v=4"></script>
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! We will contact you shortly at the provided number.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

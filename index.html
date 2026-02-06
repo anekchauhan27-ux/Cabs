@@ -33,6 +33,24 @@
     }
     </script>
 
+    <!-- WebSite Schema for Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SafeRide School Cabs",
+      "url": "https://saferideschoolcabs.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://saferideschoolcabs.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17933489652"></script>
     <script>
@@ -60,10 +78,12 @@
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#schools">Schools</a></li>
-                    <li><a href="#areas">Areas</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact" class="btn btn-primary">Get Enquiry</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="areas.html">Areas</a></li>
+                    <li><a href="schools.html">Schools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-phone">
@@ -75,12 +95,14 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu">
-        <button class="close-menu-btn">&times;</button>
+        <button class="close-menu-btn" onclick="closeMenu()">&times;</button>
         <ul class="mobile-nav-list">
-            <li><a href="#schools">Schools</a></li>
-            <li><a href="#areas">Areas</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="areas.html">Areas</a></li>
+            <li><a href="schools.html">Schools</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
@@ -444,7 +466,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=4"></script>
 </body>
 
 </html>

@@ -1,30 +1,49 @@
+// Global functions for inline HTML calls
+window.toggleMenu = function () {
+    console.log('Toggle menu called');
+    const menu = document.querySelector('.mobile-menu');
+    if (menu) {
+        menu.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+        console.error('Mobile menu element not found');
+    }
+}
+
+window.closeMenu = function () {
+    console.log('Close menu called');
+    const menu = document.querySelector('.mobile-menu');
+    if (menu) {
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const closeMenuBtn = document.querySelector('.close-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-list a');
+    // Debug logging
+    console.log('Script loaded successfully');
 
-    function toggleMenu() {
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    }
+    // Mobile Menu Toggle with Event Delegation
+    document.addEventListener('click', function (e) {
+        // Toggle Menu
+        if (e.target.closest('.menu-toggle')) {
+            window.toggleMenu(); // Use shared function
+        }
 
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', toggleMenu);
-    }
+        // Close Menu Button
+        if (e.target.closest('.close-menu-btn')) {
+            window.closeMenu();
+        }
 
-    if (closeMenuBtn) {
-        closeMenuBtn.addEventListener('click', toggleMenu);
-    }
+        // Close when clicking outside
+        if (e.target.classList.contains('mobile-menu')) {
+            window.closeMenu();
+        }
 
-    // Close menu when clicking a link
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
+        // Close when clicking a link
+        if (e.target.closest('.mobile-nav-list a')) {
+            window.closeMenu();
+        }
     });
 
     // Sticky Call Button visibility (Optional enhancement: hide when footer is visible)
@@ -33,25 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (stickyBtn && footer) {
         window.addEventListener('scroll', () => {
-            const footerRect = footer.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-
-            // If footer is visible, hide the sticky button to avoid overlap?
-            // Actually, for a conversion focused site, keeping it visible is usually better.
-            // But let's add a small fade-in effect on scroll if we wanted.
-            // For now, simple fixed position is best for conversion.
+            // Simple visibility logic if needed
         });
     }
-    
-    // Smooth Scroll for "Get Enquiry" buttons if not supported natively
+
+    // Smooth Scroll for "Get Enquiry" buttons
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                e.preventDefault();
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
